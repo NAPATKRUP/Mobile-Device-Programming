@@ -14,7 +14,10 @@ const MealList = (props) => {
         image={ itemData.item.imageUrl }
         onSelectMeal={() => {
           // เขียนโค้ดเพิ่ม
-          props.navigation.navigate("MealDetail", { categoryId: itemData.item.id })
+          props.navigation.push("MealDetail", { 
+            categoryId: itemData.item.id,
+            mealTitle: itemData.item.title,
+          })
         }}
       />
     );
